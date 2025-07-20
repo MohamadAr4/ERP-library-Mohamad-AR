@@ -1,0 +1,92 @@
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  left: 15px;
+}
+
+/*--------------------------------------------------------------
+# Override some default Bootstrap stylings
+--------------------------------------------------------------*/
+/* Dropdown menus */
+.dropdown-menu .dropdown-item i {
+  margin-right: 10px;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+  padding-left: 10px;
+}
+
+.header .search-form button {
+  margin-left: -30px;
+}
+
+/*--------------------------------------------------------------
+# Header Nav
+--------------------------------------------------------------*/
+.header-nav .nav-icon {
+  margin-right: 25px;
+}
+
+.header-nav .notifications {
+  inset: 8px -15px auto auto !important;
+}
+
+.header-nav .notifications .notification-item i {
+  margin: 0 20px 0 10px;
+}
+
+.header-nav .messages {
+  inset: 8px -15px auto auto !important;
+}
+
+.header-nav .messages .message-item img {
+  margin: 0 20px 0 10px;
+}
+
+.header-nav .profile .dropdown-item i {
+  margin-right: 10px;
+}
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.sidebar {
+  left: 0px;
+  box-shadow: 0px 0px 5px rgba(1, 41, 112, 0.1);
+  border-right: 1px solid var(--bs-border-color) !important;
+}
+.toggle-sidebar .sidebar {
+  left: -300px;
+}
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 995;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar-nav .nav-link i {
+  margin-right: 5px;
+}
+
+.sidebar-nav .nav-link .bi-chevron-down {
+  margin-right: 0;
+}
+
+.sidebar-nav .nav-heading {
+  margin: 10px 10px 5px 15px;
+}
+
+.sidebar-nav .nav-content a {
+  padding: 5px 0 5px 20px;
+}
+
+.sidebar-nav .nav-content a i {
+  margin-right: 8px;
+}

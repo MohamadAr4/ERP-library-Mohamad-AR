@@ -1,0 +1,93 @@
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  right: 15px;
+}
+
+/*--------------------------------------------------------------
+# Override some default Bootstrap stylings
+--------------------------------------------------------------*/
+/* Dropdown menus */
+.dropdown-menu .dropdown-item i {
+  margin-left: 10px;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+  padding-right: 10px;
+}
+
+.header .search-form button {
+  margin-right: -30px;
+}
+
+/*--------------------------------------------------------------
+# Header Nav
+--------------------------------------------------------------*/
+.header-nav .nav-icon {
+  margin-left: 25px;
+}
+
+.header-nav .notifications {
+  inset: 8px -90px auto auto !important;
+}
+
+.header-nav .notifications .notification-item i {
+  margin: 0 10px 0 20px;
+}
+
+.header-nav .messages {
+  inset: 8px -90px auto auto !important;
+}
+
+.header-nav .messages .message-item img {
+  margin: 0 10px 0 20px;
+}
+
+.header-nav .profile .dropdown-item i {
+  margin-left: 10px;
+}
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.sidebar {
+  right: 0;
+  box-shadow: 0px 0px 15px rgba(1, 41, 112, 0.1);
+  border-left: 1px solid var(--bs-border-color) !important;
+}
+.toggle-sidebar .sidebar {
+  right: -300px;
+}
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 995;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar-nav .nav-link i {
+  margin-left: 5px;
+}
+
+.sidebar-nav .nav-link .bi-chevron-down {
+  margin-left: 0;
+}
+
+.sidebar-nav .nav-heading {
+  margin: 10px 15px 5px 0;
+}
+
+.sidebar-nav .nav-content a {
+  /*padding: 5px 20px 5px 10px;*/
+  padding: 2px 10px 2px 5px;
+}
+
+.sidebar-nav .nav-content a i {
+  margin-left: 8px;
+}

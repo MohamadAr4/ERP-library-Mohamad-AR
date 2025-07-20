@@ -1,0 +1,52 @@
+:root, [data-bs-theme="light"]{
+  --bs-tertiary-bg: #e6e6e6;
+}
+
+.card-login-custom {
+  background-color: #FFFFFF70 !important;
+  box-shadow: 2px 2px 2px 0px var(--bs-border-color) !important;
+}
+.card-custom {
+  background-color: #ffffff90 !important;
+}
+.card-toolbar {
+  background-color: #f9f9f9 !important;
+}
+
+.form-control {
+
+}
+.form-select {
+
+}
+
+.swal2-modal, .swal2-popup, .swal2-title, .swal2-show {
+  color: var(--bs-body-color) !important;
+  background-color: var(--bs-tertiary-bg) !important;
+}
+
+.nav-underline .nav-link.active, .nav-underline .show > .nav-link {
+  font-weight: 700;
+  color: var(--bs-nav-underline-link-active-color);
+  border-bottom-color:rgb(190,0,0) !important;
+  border-bottom-width: 3px !important;
+}
+/*--------------------------------------------------------------
+# Tabs
+--------------------------------------------------------------*/
+.nav-tabs {
+  /*border: none !important;*/
+}
+.nav-link {
+  color: var(--bs-body-color) !important;
+}
+.nav-tabs .nav-link {
+  border: none !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border-top: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-left: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-right: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-bottom: 3px solid darkred !important;
+  font-weight: bold;
+}

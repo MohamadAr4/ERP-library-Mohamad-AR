@@ -1,0 +1,203 @@
+import PhFOperations, {
+  PhAggregate,
+  PhAggregate_None,
+  PhAggregate_Count,
+  PhAggregate_Sum,
+  PhAggregate_Avg,
+  PhAggregate_Min,
+  PhAggregate_Max,
+  PhAggregate_StdDev,
+  PhAggregate_Var,
+  PhAggregate_Median,
+  PhFOper_EQ,
+  PhFOper_NE,
+  PhFOper_ST,
+  PhFOper_ED,
+  PhFOper_CT,
+  PhFOper_NST,
+  PhFOper_NED,
+  PhFOper_NCT,
+  PhFOper_GT,
+  PhFOper_GE,
+  PhFOper_LT,
+  PhFOper_LE,
+  PhFOper_BT,
+  PhFOper_NB,
+  PhFC_Number,
+  PhFC_Autocomplete,
+  PhFC_DatePicker,
+  PhFC_Select,
+  PhFC_CheckBox,
+  PhFC_Text,
+} from "../../../../operation";
+
+import BaseUrl from "../../../../contants";
+
+let meta = {
+  isFilter: true,
+  isAggregate: false,
+  isDisplayOPtion: true,
+  isPrintOption: false,
+  isGroupBy: false,
+  displayOptionCardClass: "",
+  Generals: {
+    title: "Monthly payroll Table",
+  },
+  URLS: {
+    New: { URl: "", Method: "POST" },
+    Update: { URl: "", Method: "PUT" },
+    Delete: { URl: "", Method: "DELETE" },
+    Search: {
+      URl: `${BaseUrl}CC/HR/EmployeesPayrollTax`,
+      Method: "POST",
+    },
+    Get: { URl: "", Method: "GET" },
+  },
+  Fields: [
+    {
+      label: "Employee",
+      element: "fldEmpFname",
+      rElement: "fldEmpFName",
+      field: "empId",
+      rField: "empName",
+      type: "text",
+      isForm: true,
+      isQuery: true,
+      hasSecondField: false,
+      isShown: true,
+      Query: {
+        isRequired: false,
+        isAutocomplete: false,
+        dataType: PhFC_Text,
+        divClass: "col-sm-4 px-0",
+        labelClass:
+          "col-sm-1 form-label ph-label text-start text-sm-end text-start text-sm-end",
+        inputClass: "form-control form-control-sm",
+        Operation: "1",
+        autocomplete: {
+          data_label: "",
+          data_acrel: "",
+          data_acoperation: "", // AutoComplete url
+          data_params: "",
+        },
+        value1: "",
+        value2: "",
+        defValue: "",
+        aOperations: [
+          PhFOper_CT,
+          PhFOper_NCT,
+          PhFOper_EQ,
+          PhFOper_NE,
+          PhFOper_ST,
+          PhFOper_NST,
+          PhFOper_ED,
+          PhFOper_NED,
+        ],
+        defOperationValue: PhFOper_CT,
+        tableWidth: "10",
+      },
+    },
+    {
+      label: "Year",
+      element: "fldYear",
+      second_element: "fldYear-second", //if the field does not have second field this key must be removed
+      rElement: "fldYearName",
+      field: "year",
+      rField: "salYearName",
+      type: "text",
+      isForm: false,
+      isQuery: true,
+      hasSecondField: true, //if the field does not have second field (false)
+      isShown: true,
+      Query: {
+        isRequired: true,
+        isAutocomplete: false,
+        dataType: PhFC_Number,
+        divClass: "col-sm-2 px-0", //if it doesnt have second field "col-sm-4 px-0"
+        labelClass:
+          "col-sm-1 form-label ph-label text-start text-sm-end text-start text-sm-end",
+        inputClass: "form-control form-control-sm",
+        Operation: "YY", //must be unique
+        value1: "",
+        value2: "",
+        defValue: "",
+        aOperations: [
+          PhFOper_EQ,
+          PhFOper_NE,
+          PhFOper_GT,
+          PhFOper_GE,
+          PhFOper_LT,
+          PhFOper_LE,
+          PhFOper_BT,
+          PhFOper_NB,
+          PhFOper_ST,
+          PhFOper_ED,
+          PhFOper_CT,
+          PhFOper_NST,
+          PhFOper_NED,
+          PhFOper_NCT,
+        ],
+        defOperationValue: PhFOper_EQ,
+        tableWidth: "15",
+      },
+    },
+    {
+      label: "Month",
+      element: "fldMonth",
+      second_element: "fldMonth-second", //if the field does not have second field this key must be removed
+      rElement: "fldMonthName",
+      field: "month",
+      rField: "salMonthName",
+      type: "text",
+      isForm: false,
+      isQuery: true,
+      hasSecondField: true, //if the field does not have second field (false)
+      isShown: true,
+      Query: {
+        isRequired: true,
+        isAutocomplete: false,
+        dataType: PhFC_Number,
+        divClass: "col-sm-2 px-0", //if it doesnt have second field "col-sm-4 px-0"
+        labelClass:
+          "col-sm-1 form-label ph-label text-start text-sm-end text-start text-sm-end",
+        inputClass: "form-control form-control-sm",
+        Operation: "MM", //must be unique
+        value1: "",
+        value2: "",
+        defValue: "",
+        aOperations: [
+          PhFOper_BT
+        ],
+        defOperationValue: PhFOper_BT,
+        tableWidth: "15",
+      },
+    },
+  ],
+  DisplayOption: [ 
+    {
+      label: "Insurance",
+      element: "disInsurName",
+      field: "insurName",
+      labelClass: "col-sm-9 form-label ph-label text-start pt-2",
+      class: "form-check-input border-secondary mx-1 mb-1 all-Display-Option",
+      type: "checkbox",
+      value: "",
+      checked: true,
+      defValue: true,
+      dataType: PhFC_CheckBox,
+    },
+    {
+      label: "Tax",
+      element: "disTaxName",
+      field: "taxName",
+      labelClass: "col-sm-9 form-label ph-label text-start pt-2",
+      class: "form-check-input border-secondary mx-1 mb-1 all-Display-Option",
+      type: "checkbox",
+      value: "",
+      checked: true,
+      defValue: true,
+      dataType: PhFC_CheckBox,
+    }],
+};
+
+export { meta };

@@ -1,0 +1,122 @@
+:root {
+  --ph-main-color: darkcyan;
+  --ph-second-color: cyan;
+  --ph-main-outside-color: darkcyan;
+  --ph-main-inside-color: #00a8a8;
+  --ph-pagetitle-outside-color: darkcyan;
+  --ph-pagetitle-inside-color: #03c1c1;
+  --ph-sidebar-outside-color: #00d0d0;
+  --ph-sidebar-inside-color: darkcyan;
+}
+
+body.login {
+  /*background-color: #e8f2ff;*/
+}
+#header, .footer {
+  /* https://colorzilla.com/gradient-editor */
+  background: linear-gradient(to right, var(--ph-main-outside-color) 0%, var(--ph-main-inside-color) 30%, var(--ph-main-inside-color) 70%, var(--ph-main-outside-color) 100%);
+  color: white;
+}
+.pagetitle{
+  background: linear-gradient(to right, var(--ph-pagetitle-outside-color) 0%, var(--ph-pagetitle-inside-color) 40%, var(--ph-pagetitle-inside-color) 60%, var(--ph-pagetitle-outside-color) 100%);
+  color: white;
+}
+.nav-profile {
+  background-color: var(--ph-main-color);
+  color: white;
+}
+
+.dropdown-menu {
+  background: linear-gradient(to right, var(--ph-main-outside-color) 0%, var(--ph-main-inside-color) 30%, var(--ph-main-inside-color) 70%, var(--ph-main-outside-color) 100%);
+  color: white;
+}
+a.dropdown-item{
+  color: white !important;
+}
+a.dropdown-item:hover {
+  color: var(--ph-main-color) !important;
+  -webkit-mask-image: linear-gradient(-75deg, #FFF 30%, rgba(0,0,0,.6) 50%, #FFF 70%);
+  -webkit-mask-size: 200%;
+  animation: rightshine 1s infinite;
+}
+
+.sidebar, .offcanvas, .card-side {
+  background: linear-gradient(45deg, var(--ph-sidebar-outside-color) 0%, var(--ph-sidebar-inside-color) 40%, var(--ph-sidebar-inside-color) 60%, var(--ph-sidebar-outside-color) 100%) !important;
+  color: white !important;
+}
+a.nav-link, .sidebar-nav .nav-link:hover{
+  color: white !important;
+}
+a.nav-link:hover {
+  color: var(--ph-second-color) !important;
+  -webkit-mask-image: linear-gradient(-75deg, #FFF 30%, rgba(0,0,0,.6) 50%, #FFF 70%);
+  -webkit-mask-size: 200%;
+  animation: rightshine 2s infinite;
+}
+.sidebar-nav .nav-link.active, .sidebar-nav .nav-link:hover {
+  color: var(--ph-main-color) !important;
+}
+
+.btn:hover {
+  -webkit-mask-image: linear-gradient(-75deg, #FFF 30%, rgba(0,0,0,.6) 50%, #FFF 70%);
+  -webkit-mask-size: 200%;
+  animation: rightshine 2s infinite;
+}
+
+.shine-effect:hover {
+  -webkit-mask-image: linear-gradient(-75deg, #FFF 30%, rgba(0,0,0,.6) 50%, #FFF 70%);
+  -webkit-mask-size: 200%;
+  animation: rightshine 2s infinite;
+}
+
+@-webkit-keyframes leftshine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+@-webkit-keyframes rightshine {
+  from {
+    -webkit-mask-position: -1%;
+  }
+
+  to {
+    -webkit-mask-position: 150%;
+  }
+}
+/************************************************/
+.nav-tabs .nav-link {
+  border-top: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-left: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-right: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-bottom: 3px solid var(--ph-second-color) !important;
+  color: var(--ph-main-color) !important;
+}
+.nav-tabs .nav-link.active {
+  border-top: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-left: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-right: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-bottom: 3px solid var(--ph-main-color) !important;
+  color: #FFF !important;
+  background-color: var(--ph-main-color);
+}
+
+.offcanvas .nav-tabs .nav-link {
+  border-top: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-left: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-right: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-bottom: 3px solid var(--ph-second-color) !important;
+  color: var(--ph-second-color) !important;
+}
+.offcanvas .nav-tabs .nav-link.active {
+  border-top: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-left: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-right: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-bottom: 3px solid var(--ph-main-color) !important;
+  color: var(--ph-main-color) !important;
+  background-color: var(--ph-second-color) !important;
+}

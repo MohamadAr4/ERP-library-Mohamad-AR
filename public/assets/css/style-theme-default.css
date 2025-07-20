@@ -1,0 +1,121 @@
+:root {
+  --ph-main-color: rgba(35,83,138,1);
+  --ph-second-color: rgba(97, 148, 208,1);
+  --ph-main-outside-color: rgba(35,83,138,1);
+  --ph-main-inside-color: rgba(97, 148, 208,1);
+  --ph-pagetitle-outside-color: rgba(35,83,138,1);
+  --ph-pagetitle-inside-color: rgba(97, 148, 208,1);
+  --ph-sidebar-outside-color: rgba(35,83,138,1);
+  --ph-sidebar-inside-color: rgba(97, 148, 208,1);
+}
+
+body.login {
+  /*background-color: #e8f2ff;*/
+}
+#header, .footer {
+  /* https://colorzilla.com/gradient-editor */
+  background: linear-gradient(to right, var(--ph-main-outside-color) 0%, var(--ph-main-inside-color) 40%, var(--ph-main-inside-color) 60%, var(--ph-main-outside-color) 100%) !important;
+  color: white !important;
+}
+.pagetitle{
+  background: linear-gradient(to right, var(--ph-pagetitle-outside-color) 0%, var(--ph-pagetitle-inside-color) 40%, var(--ph-pagetitle-inside-color) 60%, var(--ph-pagetitle-outside-color) 100%);
+  color: white;
+}
+.nav-profile {
+  background-color: var(--ph-second-color) !important;
+  color: white !important;
+}
+
+.dropdown-menu {
+  background: linear-gradient(to right, var(--ph-main-outside-color) 0%, var(--ph-main-inside-color) 40%, var(--ph-main-inside-color) 60%, var(--ph-main-outside-color) 100%) !important;
+  color: white !important;
+}
+a.dropdown-item{
+  color: white !important;
+}
+a.dropdown-item:hover {
+  color: var(--ph-main-color) !important;
+  -webkit-mask-image: linear-gradient(-75deg, #FFF 30%, rgba(0,0,0,.6) 50%, #FFF 70%);
+  -webkit-mask-size: 200%;
+  animation: rightshine 1s infinite;
+}
+
+.sidebar, .offcanvas, .card-side {
+  background: linear-gradient(45deg, var(--ph-main-outside-color) 0%, var(--ph-main-inside-color) 40%, var(--ph-main-inside-color) 60%, var(--ph-main-outside-color) 100%) !important;
+  color: white !important;
+}
+a.nav-link, .sidebar-nav .nav-link:hover{
+  color: white !important;
+}
+a.nav-link:hover {
+  color: var(--ph-main-color) !important;
+  -webkit-mask-image: linear-gradient(-75deg, #FFF 30%, rgba(0,0,0,.6) 50%, #FFF 70%);
+  -webkit-mask-size: 200%;
+  animation: rightshine 2s infinite;
+}
+.sidebar-nav .nav-link.active, .sidebar-nav .nav-link:hover {
+  color: var(--ph-main-color) !important;
+}
+
+.btn:hover {
+  -webkit-mask-image: linear-gradient(-75deg, #FFF 30%, rgba(0,0,0,.6) 50%, #FFF 70%);
+  -webkit-mask-size: 200%;
+  animation: rightshine 2s infinite;
+}
+
+.shine-effect:hover {
+  -webkit-mask-image: linear-gradient(-75deg, #FFF 30%, rgba(0,0,0,.6) 50%, #FFF 70%);
+  -webkit-mask-size: 200%;
+  animation: rightshine 2s infinite;
+}
+
+@-webkit-keyframes leftshine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+@-webkit-keyframes rightshine {
+  from {
+    -webkit-mask-position: -1%;
+  }
+
+  to {
+    -webkit-mask-position: 150%;
+  }
+}
+/************************************************/
+.nav-tabs .nav-link {
+  border-top: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-left: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-right: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-bottom: 3px solid var(--ph-second-color) !important;
+  color: var(--ph-main-color) !important;
+}
+.nav-tabs .nav-link.active {
+  border-top: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-left: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-right: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-bottom: 3px solid var(--ph-main-color) !important;
+  color: #FFF !important;
+  background-color: var(--ph-main-color) !important;
+}
+
+.offcanvas .nav-tabs .nav-link {
+  border-top: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-left: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-right: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-bottom: 3px solid var(--ph-second-color) !important;
+  color: #FFF !important;
+}
+.offcanvas .nav-tabs .nav-link.active {
+  border-top: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-left: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-right: var(--bs-nav-tabs-border-width) solid #ececec90 !important;
+  border-bottom: 3px solid var(--ph-main-color) !important;
+  color: #FFF !important;
+  background-color: var(--ph-second-color) !important;
+}
